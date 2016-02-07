@@ -4,12 +4,6 @@ namespace Monsters
 {
 	public class User
 	{
-		//CONSTRUCTOR
-
-		public User ()
-		{
-			FindUserDamage ();
-		}
 			
 		//FIELDS
 
@@ -17,6 +11,13 @@ namespace Monsters
 		private int damage;
 		private int monstersKilled = 0;
 		private int runAmmount = 0;
+
+		//CONSTRUCTOR
+
+		public User ()
+		{
+			FindUserDamage ();
+		}
 			
 		//FIELD PROPERTIES
 
@@ -101,12 +102,6 @@ namespace Monsters
 			
 		//METHODS
 
-		private void FindUserDamage()
-		{
-			Random r = new Random ();
-			damage = r.Next (5, 11);
-
-		}
 		public bool AttackMonster(Monster m)
 		{
 			bool monsterDead = false;
@@ -123,8 +118,14 @@ namespace Monsters
 			}
 
 		}
-		
 
+		private void FindUserDamage()
+		{
+			Random r = new Random ();
+			damage = r.Next (5, 11);
+
+		}
+			
 	}
 }
 

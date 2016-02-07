@@ -6,9 +6,13 @@ namespace Monsters
 {
 	public partial class ViewController : UIViewController
 	{
+		//FIELDS
+
 		private int runButtonPressed = 0;
-		User user = new User();
-		MonsterList monsterList = new MonsterList();
+		private User user = new User();
+		private MonsterList monsterList = new MonsterList();
+
+		//CONSTRUCTOR 
 
 		public ViewController (IntPtr handle) : base (handle)
 		{
@@ -37,6 +41,8 @@ namespace Monsters
 			UserHealthLabel.Text = user.Health.ToString();
 			UserDamageLabel.Text = user.Damage.ToString();
 		}
+
+		//BUTTONS 
 
 		partial void AttackButton_TouchUpInside (UIButton sender)
 		{

@@ -5,16 +5,11 @@ namespace Monsters
 {
 	public class MonsterList
 	{
+		//FIELDS
 
 		private List<Monster> allMonsters = new List<Monster>();
 
-		public List<Monster> AllMonsters
-		{
-			get
-			{
-				return allMonsters;
-			}
-		}
+		//CONSTRUCTORS
 
 		public MonsterList ()
 		{
@@ -24,6 +19,19 @@ namespace Monsters
 				AddMonster (monster);
 			}
 		}
+
+		//FIELD PROPERTIES
+
+		public List<Monster> AllMonsters
+		{
+			get
+			{
+				return allMonsters;
+			}
+		}
+			
+		//METHODS 
+
 		public void AddMonster(Monster m)
 		{
 			allMonsters.Add (m);
