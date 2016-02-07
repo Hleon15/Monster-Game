@@ -41,7 +41,7 @@ namespace Monsters
 		partial void AttackButton_TouchUpInside (UIButton sender)
 		{
 			user.AttackMonster(monsterList.AllMonsters[user.MonstersKilled]);
-			if(user.DidWin())
+			if(user.DidWin)
 			{
 				monsterList.AllMonsters[user.MonstersKilled - 1].Health = 0;
 				EnemyHealthLabel.Text = monsterList.AllMonsters[user.MonstersKilled - 1].Health.ToString();
@@ -66,7 +66,7 @@ namespace Monsters
 			runButtonPressed++;
 			RemainingRunsLabel.Text = runButtonPressed + "/3";
 			user.MonstersKilled++;
-			if(user.DidWin())
+			if(user.DidWin)
 			{
 				monsterList.AllMonsters[user.MonstersKilled - 1].Health = 0;
 				EnemyHealthLabel.Text = monsterList.AllMonsters[user.MonstersKilled - 1].Health.ToString();
