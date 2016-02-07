@@ -48,7 +48,7 @@ namespace Monsters
 				UIAlertView alert = new UIAlertView("Game Over","You won!",null,"Quit",null);
 				alert.Show();
 			}
-			else if(user.UserDead())
+			else if(user.UserDead)
 			{
 				UIAlertView alert = new UIAlertView("Game Over","You Died!",null,"Quit",null);
 				alert.Show();
@@ -77,7 +77,7 @@ namespace Monsters
 			{
 			updateMonsterStats();
 			}
-			if(user.RunCount())
+			if(user.RunCount)
 			{
 				UIAlertView alert = new UIAlertView("Error","Out of runs",null,"Quit",null);
 				alert.Show();

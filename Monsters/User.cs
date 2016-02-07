@@ -81,27 +81,35 @@ namespace Monsters
                 }
             }
 		}
-		public bool UserDead()
+		public bool UserDead 
 		{
-			if(health <= 0)
+			get 
 			{
-				return true;
-			}
-			else
-			{
-				return false;
+				if (health <= 0) 
+				{
+					return true;
+
+				} 
+				else 
+				{
+					return false;
+				}
 			}
 		}
-		public bool RunCount()
+		public bool RunCount
 		{
-			runAmmount++;
-			if(runAmmount == 3)
+
+			get
 			{
-				return true;
-			}
-			else
-			{
-				return false;
+				runAmmount++;
+				if (runAmmount == 3)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
 			}
 		}
 
