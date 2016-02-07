@@ -67,16 +67,19 @@ namespace Monsters
 			}
 				
 		}
-		public bool DidWin()
+		public bool DidWin
 		{
-			if(monstersKilled == 13 && health >0)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
+            get
+            {
+                if (monstersKilled == 13 && health > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
 		}
 		public bool UserDead()
 		{
